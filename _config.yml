@@ -1,0 +1,8 @@
+# Site settings
+title: dpk2424
+
+# Link settings
+permalink: pretty
+
+# Build settings
+markdown: kramdown

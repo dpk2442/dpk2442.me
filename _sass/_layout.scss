@@ -1,0 +1,89 @@
+header, #content, footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    height: $titleTextSize + 2*$titleTextMargin;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 25px;
+    h1 {
+        display: inline-block;
+        float: left;
+        height: $titleTextSize;
+        font-size: $titleTextSize;
+        margin: $titleTextMargin 0;
+        a {
+            display: block;
+            color: black;
+            text-decoration: none;
+        }
+    }
+    ul {
+        display: inline-block;
+        float: right;
+        height: $titleTextSize;
+        line-height: $titleTextSize;
+        margin: $titleTextMargin 0;
+        padding: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+            float: left;
+            a {
+                display: block;
+                font-size: $navLinkTextSize;
+                font-weight: lighter;
+                color: black;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+#content h1:first-child {
+    margin-top: 0;
+}
+
+footer {
+    border-top: 1px solid #CCC;
+    margin-top: 25px;
+    color: #777;
+    font-size: 14px;
+    .footer-column {
+        display: inline-block;
+        width: 33.33333%;
+        float: left;
+        margin-top: 20px;
+    }
+    #profile-links {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    #profile-links li {
+        display: inline-block;
+        float: right;
+        margin-left: 15px;
+    }
+    #profile-links a {
+        display: block;
+        text-indent: 1000px;
+    }
+    #github-link {
+        height: 30px;
+        width: 30px;
+        background-image: url('../img/github-mark.png');
+        background-size: 30px 30px;
+    }
+    #linkedin-link {
+        height: 30px;
+        width: 39px;
+        background-image: url('../img/linkedin-bug.png');
+        background-size: 39px 30px;
+    }
+}
