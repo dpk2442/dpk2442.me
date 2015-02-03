@@ -31,8 +31,16 @@ header {
         li {
             display: inline-block;
             float: left;
+            &:not(:first-child) {
+                margin-left: 10px;
+                &::before {
+                    font-size: $navLinkTextSize;
+                    content: '|';
+                    margin-right: 10px;
+                }
+            }
             a {
-                display: block;
+                display: inline-block;
                 font-size: $navLinkTextSize;
                 font-weight: lighter;
                 color: black;
