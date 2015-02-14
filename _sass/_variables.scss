@@ -2,19 +2,22 @@
  * Global variables
  */
 
+$thirdPercent: 100% / 3;
+
 $fontFamily: Helvetica, sans-serif;
 $fontSize: 16px;
+
+$sectionBorderColor: #CCC;
 
 /**
  * Layout
  */
 
+// Breakpoints
+$mobileMaxLarge: 1040px;
+$mobileMaxSmall: 590px;
+
 // Header
 $titleTextSize: 32px;
 $titleTextMargin: 20px;
 $navLinkTextSize: 20px;
-
-// Content
-
-
-// Footer

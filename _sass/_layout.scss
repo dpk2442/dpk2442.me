@@ -2,18 +2,29 @@ header, #content, footer {
     max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
+    @media (max-width: $mobileMaxLarge) {
+        width: calc(100% - 40px);
+        margin: 0 20px;
+    }
 }
 
 header {
     height: $titleTextSize + 2*$titleTextMargin;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid $sectionBorderColor;
     margin-bottom: 25px;
+    @media (max-width: $mobileMaxSmall) {
+        height: auto;
+    }
     h1 {
         display: inline-block;
         float: left;
         height: $titleTextSize;
         font-size: $titleTextSize;
         margin: $titleTextMargin 0;
+        @media (max-width: $mobileMaxSmall) {
+            display: block;
+            float: none;
+        }
         a {
             display: block;
             color: black;
@@ -28,6 +39,10 @@ header {
         margin: $titleTextMargin 0;
         padding: 0;
         list-style: none;
+        @media (max-width: $mobileMaxSmall) {
+            display: block;
+            float: none;
+        }
         li {
             display: inline-block;
             float: left;
@@ -63,15 +78,36 @@ header {
 }
 
 footer {
-    border-top: 1px solid #CCC;
+    position: relative;
+    border-top: 1px solid $sectionBorderColor;
     margin-top: 25px;
     color: #777;
     font-size: 14px;
+    .footer-float-wrapper {
+        overflow: hidden;
+    }
     .footer-column {
         display: inline-block;
-        width: 33.33333%;
-        float: left;
+        width: $thirdPercent;
         margin-top: 20px;
+        &.left-footer-column {
+            float: left;
+        }
+        &.right-footer-column {
+            float: right;
+        }
+    }
+    .copyright-footer-column {
+        position: absolute;
+        top: 0;
+        left: $thirdPercent;
+        @media (max-width: $mobileMaxSmall) {
+            display: block;
+            position: inherit;
+            top: inherit;
+            left: inherit;
+            width: 100%;
+        }
     }
     #profile-links {
         margin: 0;
