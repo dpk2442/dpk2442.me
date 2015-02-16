@@ -1,3 +1,6 @@
+# Site settings
+postLimit: site.posts.length
+
 # Link settings
 permalink: pretty
 
