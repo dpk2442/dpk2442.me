@@ -42,17 +42,25 @@ header {
         @media (max-width: $mobileMaxSmall) {
             display: block;
             float: none;
+            height: auto;
+            margin-bottom: 10px;
         }
         li {
             display: inline-block;
             float: left;
-            &:not(:first-child) {
-                margin-left: 10px;
-                &::before {
-                    font-size: $navLinkTextSize;
-                    content: '|';
-                    margin-right: 10px;
+            @media (min-width: $mobileMaxSmall) {
+                &:not(:first-child) {
+                    margin-left: 10px;
+                    &::before {
+                        font-size: $navLinkTextSize;
+                        content: '|';
+                        margin-right: 10px;
+                    }
                 }
+            }
+            @media (max-width: $mobileMaxSmall) {
+                display: block;
+                float: none;
             }
             a {
                 display: inline-block;
