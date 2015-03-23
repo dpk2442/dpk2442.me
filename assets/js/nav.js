@@ -14,6 +14,8 @@
             navToggle.nav.slideToggle(200);
         }
     };
-    navToggle.init();
+    if ($(window).width() < 590) {
+        navToggle.init();
+    }
 
 })();
