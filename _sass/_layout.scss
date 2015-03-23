@@ -9,6 +9,7 @@ header, #content, footer {
 }
 
 header {
+    position: relative;
     height: $titleTextSize + 2*$titleTextMargin;
     border-bottom: 1px solid $sectionBorderColor;
     margin-bottom: 25px;
@@ -31,7 +32,17 @@ header {
             text-decoration: none;
         }
     }
-    ul {
+    #nav-mobile-toggle {
+        display: none;
+        position: absolute;
+        top: $titleTextMargin;
+        right: 0;
+        font-size: $titleTextSize * 0.8;
+        line-height: $titleTextSize;
+        color: black;
+        cursor: default;
+    }
+    #nav {
         display: inline-block;
         float: right;
         height: $titleTextSize;
