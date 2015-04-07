@@ -13,7 +13,7 @@ header {
     height: $titleTextSize + 2*$titleTextMargin;
     border-bottom: 1px solid $sectionBorderColor;
     margin-bottom: 25px;
-    @media (max-width: $mobileMaxSmall) {
+    @media (max-width: $mobileNavBreakpoint) {
         height: auto;
     }
     h1 {
@@ -22,7 +22,7 @@ header {
         height: $titleTextSize;
         font-size: $titleTextSize;
         margin: $titleTextMargin 0;
-        @media (max-width: $mobileMaxSmall) {
+        @media (max-width: $mobileNavBreakpoint) {
             display: block;
             float: none;
         }
@@ -50,7 +50,7 @@ header {
         margin: $titleTextMargin 0;
         padding: 0;
         list-style: none;
-        @media (max-width: $mobileMaxSmall) {
+        @media (max-width: $mobileNavBreakpoint) {
             display: block;
             float: none;
             height: auto;
@@ -59,7 +59,7 @@ header {
         li {
             display: inline-block;
             float: left;
-            @media (min-width: $mobileMaxSmall) {
+            @media (min-width: $mobileNavBreakpoint+1) {
                 &:not(:first-child) {
                     margin-left: 10px;
                     &::before {
@@ -69,7 +69,7 @@ header {
                     }
                 }
             }
-            @media (max-width: $mobileMaxSmall) {
+            @media (max-width: $mobileNavBreakpoint) {
                 display: block;
                 float: none;
             }

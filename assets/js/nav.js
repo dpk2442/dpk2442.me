@@ -14,7 +14,7 @@
             navToggle.nav.slideToggle(200);
         }
     };
-    if ($(window).width() < 590) {
+    if ($(window).width() <= 650) {
         navToggle.init();
     }
 
